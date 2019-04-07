@@ -9,7 +9,7 @@ namespace Trippi_Alg.Models
     {
 
         public int ID { get; set; }
-        public int MoneyAmount { get; set; }
+        public double MoneyAmount { get; set; }
         public CurrencyCode Currency { get; set; }
 
     }

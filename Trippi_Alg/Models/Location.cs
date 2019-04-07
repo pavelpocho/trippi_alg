@@ -12,12 +12,24 @@ namespace Trippi_Alg.Models
         public bool IsCrossing { get; set; }
         public Country CrossingFrom { get; set; }
         public Country CrossingTo { get; set; }
-        public DateTime CrossedAt { get; set; }
+        public long? CrossedAt { get; set; } //Number of milliseconds since departure from last point
+        public bool CrossedBorder { get; set; }
         public TravelType? InboundTravelType { get; set; }
         public City City { get; set; }
-        public DateTime? Arrival { get; set; }
-        public DateTime? Departure { get; set; }
+
+        //Milliseconds to midnight of the correct day
+        public long? ArrivalDate { get; set; }
+        //Milliseconds to correct time since midnight
+        public long? ArrivalTime { get; set; }
+
+        //Milliseconds to midnight of the correct day
+        public long? DepartureDate { get; set; }
+        //Milliseconds to correct time since midnight
+        public long? DepartureTime { get; set; }
         public LocationFood Food { get; set; }
+        public int TripId { get; set; }
+        public int Position { get; set; }
+        public bool Deleted { get; set; }
 
     }
 
