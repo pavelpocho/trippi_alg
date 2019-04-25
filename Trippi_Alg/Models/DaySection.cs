@@ -32,7 +32,16 @@ namespace Trippi_Alg.Models
                 s.Append(Food.Lunch ? "L " : "");
                 s.Append(Food.Dinner ? "D " : "");
             }
-
+            s.Append(" ;; ");
+           
+            if (Allowance != null)
+            {
+                s.Append("Allowance:");
+                s.Append(Allowance.MoneyAmount);
+                s.Append(" ");
+                s.Append(Allowance.Currency);
+            }
+               
             return s.ToString();
         }
     }
